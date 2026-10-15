@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Puppeteer Privacy Policy</title>
+<style>
+  body { margin: 0; padding: 40px 20px; font: 16px/1.65 -apple-system, "Segoe UI", system-ui, sans-serif; color: #1d1d22; background: #fff; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 30px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  .muted { color: #666; }
+  li { margin: 4px 0; }
+  code { background: #f2f2f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Puppeteer Privacy Policy</h1>
+  <p class="muted">Effective October 14, 2026</p>
+
+  <p>Puppeteer is a Chrome extension that rewrites text you highlight in a text box. You choose where the rewriting happens: on your own computer (the default), or with Google's Gemini API using your own API key. The developer of Puppeteer runs no servers and receives none of your data.</p>
+
+  <h2>What Puppeteer handles</h2>
+  <ul>
+    <li><b>The text you highlight</b> in an editable field, plus the sentence it sits in and about 200 characters before and after it, so the rewrite fits.</li>
+    <li><b>In Google Docs</b>, the plain text of the open document, fetched from <code>docs.google.com</code> with your existing session, used on your computer only to find the sentence around your selection.</li>
+    <li><b>Your settings</b> (rewrite style, engine, per-site on/off, and so on).</li>
+    <li><b>Your Gemini API key</b>, if you add one.</li>
+  </ul>
+  <p>Puppeteer ignores password, email, phone, URL, one-time-code and credit-card fields.</p>
+
+  <h2>On-device mode (default)</h2>
+  <p>Rewrites run entirely on your computer's GPU. Your text is never sent anywhere. The only network request is the one-time download of the AI model's files from <code>huggingface.co</code>; Hugging Face sees your IP address, as with any download, but no text.</p>
+
+  <h2>Gemini mode (optional)</h2>
+  <p>If you switch to Gemini and press Enter or click the pen, the highlighted text and its surrounding context are sent directly from your browser to Google's Gemini API (<code>generativelanguage.googleapis.com</code>) with your API key. Nothing is sent while you merely highlight text. Google processes that text under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. With a free-tier key, Google may use submitted content to improve its products, and human reviewers may read it, so avoid Gemini mode for sensitive text or use a paid key.</p>
+  <p>If Gemini fails or is slow and the on-device fallback is on, the same text is rewritten on your computer instead, without leaving it.</p>
+
+  <h2>What the developer receives</h2>
+  <p>Nothing. Puppeteer has no analytics, tracking, advertising or accounts, and does not sell, share or transfer your data to anyone. The use of information received through the extension adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Storage and retention</h2>
+  <p>Settings, your API key and the downloaded model stay in your browser's storage for this extension until you remove them. "Remove download" in the popup deletes the model, "Remove key" deletes your API key, and uninstalling Puppeteer deletes everything.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><b>Read and change data on websites</b>: to notice text you highlight in text boxes on any site and put the rewrite in its place, and to call the Gemini API when you use it.</li>
+    <li><b>Storage / unlimited storage</b>: for your settings and the ~5 GB on-device model.</li>
+    <li><b>Offscreen document</b>: keeps the on-device model running in the background between rewrites.</li>
+    <li><b>Scripting</b>: after an update, restarts Puppeteer in tabs that were already open.</li>
+    <li><b>Active tab</b>: lets the popup turn Puppeteer on or off for the current site.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Puppeteer is not directed at children under 13.</p>
+
+  <h2>Changes and contact</h2>
+  <p>If this policy changes, the new version will be posted at this address with a new effective date. Questions: <a href="mailto:covell.bernstein@gmail.com">covell.bernstein@gmail.com</a>.</p>
+</main>
+</body>
+</html>
